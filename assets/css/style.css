@@ -1,13 +1,21 @@
 body {
   padding-top: 50px;
 }
+
+.navbar-brand{
+	padding:3px;
+}
+.navbar-brand:hover{
+	opacity:0.8;
+}
+
 .itdart-template {
   padding: 40px 15px;
   /*text-align: center;*/
   text-align: left;
 }
 .itdart-template h3 {
-    color: #009900;
+    color: #21b776;
 }
 
 .orgintro {
