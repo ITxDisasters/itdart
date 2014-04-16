@@ -70,11 +70,13 @@
         <hr>
         <div class="row">
           <div class="col-xs-12 col-sm-6">
-            <p><img src="assets/img/itdart.png" alt="IT DART"></p>
+            <p><img class="img-responsive" src="assets/img/itdart.png" alt="IT DART"></p>
           </div>
           <div class="col-xs-12 col-sm-6">
             <p>詳しくは以下のスライドをご覧ください。</p>
-            <p> <iframe src="http://www.slideshare.net/slideshow/embed_code/33522765" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
+            <div class="slideshare">
+              <p> <iframe src="http://www.slideshare.net/slideshow/embed_code/33522765" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
+            </div>
           </div>
         </div>
     </div><!-- /.container -->
@@ -96,5 +98,37 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+    $(function() {
+        
+        var $allVideos = $("iframe[src^='http://www.slideshare.net'], object, embed"),
+        $fluidEl = $("body");
+            
+      $allVideos.each(function() {
+      
+        $(this)
+          // jQuery .data does not work on object/embed elements
+          .attr('data-aspectRatio', this.height / this.width)
+          .removeAttr('height')
+          .removeAttr('width');
+      
+      });
+      
+      $(window).resize(function() {
+        console.log("resized");
+      
+        var newWidth = $fluidEl.width();
+        $allVideos.each(function() {
+
+          var $el = $(this);
+          $el
+              .width(newWidth)
+              .height(newWidth * $el.attr('data-aspectRatio'));
+        });
+      
+      }).resize();
+
+    });
+    </script>
   </body>
 </html>
