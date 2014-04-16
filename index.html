@@ -99,35 +99,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script>
-    // $(function() {
+    $(function() {
         
-    //     var $allVideos = $("iframe[src^='http://www.slideshare.net'], object, embed"),
-    //     $fluidEl = $("body");
+        var $allVideos = $("iframe[src^='http://www.slideshare.net'], object, embed"),
+        $fluidEl = $("body");
             
-    //   $allVideos.each(function() {
+      $allVideos.each(function() {
       
-    //     $(this)
-    //       // jQuery .data does not work on object/embed elements
-    //       .attr('data-aspectRatio', this.height / this.width)
-    //       .removeAttr('height')
-    //       .removeAttr('width');
+        $(this)
+          // jQuery .data does not work on object/embed elements
+          .attr('data-aspectRatio', this.height / this.width)
+          .removeAttr('height')
+          .removeAttr('width');
       
-    //   });
+      });
       
-    //   $(window).resize(function() {
-    //     console.log("resized");
+      $(window).resize(function() {
+        console.log("resized");
       
-    //     var newWidth = $fluidEl.width();
-    //     $allVideos.each(function() {
+        var newWidth = $fluidEl.width();
+        $allVideos.each(function() {
 
-    //       var $el = $(this);
-    //       $el
-    //           .width(newWidth)
-    //           .height(newWidth * $el.attr('data-aspectRatio'));
+          var $el = $(this);
+          $el
+              .width(newWidth)
+              .height(newWidth * $el.attr('data-aspectRatio'));
       
-    //   }).resize();
+      }).resize();
 
-    // });
+    });
     </script>
   </body>
 </html>
