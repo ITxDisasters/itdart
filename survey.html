@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <!-- <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> -->
 
-    <title>情報支援レスキュー隊 / IT DART (Disaster Assistance Response Team) </title>
+    <title>情報支援レスキュー隊 / IT DART 被災地のIT支援に関するアンケート </title>
 
     <!-- OGP -->
     <meta property="og:title" content="情報支援レスキュー隊／IT DART">
@@ -35,6 +35,7 @@
     <![endif]-->
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="icon" href="favicon.ico" />
+
   </head>
 
   <body>
@@ -55,8 +56,8 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="about.html">概要</a></li>
-            <li class="active"><a href="#">コンタクト</a></li>
-            <li><a href="survey.html">アンケート</a></li>
+            <li><a href="contact.html">コンタクト</a></li>
+            <li class="active"><a href="#">アンケート</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -64,94 +65,7 @@
 
     <div class="container">
 
-<h3>発起人（50音順）</h3>
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>氏名</th>
-                <th>所属</th>
-              </tr>
-            </thead> 
-
-            <tbody>
-              <tr>
-                <td>会津 泉</td>
-                <td>情報支援プロボノプラットフォーム(iSPP)</td>
-              </tr>
-              <tr>
-                <td>東　博暢</td>
-                <td>株式会社日本総合研究所</td>
-              </tr>
-              <tr>
-                <td>及川 卓也</td>
-                <td>Hack For Japan</td>
-              </tr>
-              <tr>
-                <td>岡田 良太郎</td>
-                <td>Asterisk Research, Inc / OWASP Japan</td>
-              </tr>
-              <tr>
-                <td>岸原 孝昌</td>
-                <td>情報支援プロボノ・プラットフォーム(iSPP)/MCF</td>
-              </tr>
-              <tr>
-                  <td>黒田 裕芳</td>
-                  <td>株式会社リコー</td>
-              </tr>
-              <tr>
-                <td>斎藤 昌義</td>
-                <td>ネットコマース</td>
-              </tr>
-              <tr>
-                <td>酒井 紀之</td>
-                <td>株式会社ソフトウエア開発 ／情報支援プロボノ・プラットフォーム（iSPP） </td>
-              </tr>
-              <tr>
-                <td>酒井 佑弥</td>
-                <td>情報支援プロボノ・プラットフォーム（iSPP）</td>
-              </tr>
-              <tr>
-                <td>佐藤 大</td>
-                <td>ネトボラ宮城 /情報支援プロボノ・プラットフォーム（iSPP） / 東北大学病院</td>
-              </tr>
-              <tr>
-                <td>柴田 哲史</td>
-                <td>UD-Consulting, Inc. </td>
-              </tr>
-              <tr>
-                <td>清水 俊之介</td>
-                <td>Studioisaac</td>
-              </tr>
-              <tr>
-                <td>瀬川 典久</td>
-                <td>岩手県立大学</td>
-              </tr>
-              <tr>
-                <td>高橋 正憲</td>
-                <td>情報支援プロボノ・プラットフォーム（iSPP）</td>
-              </tr>
-              <tr>
-                <td>徳永 礼</td>
-                <td>スリー・プロ・コンサルティング事務所</td>
-              </tr>
-              <tr>
-                <td>地主 雅信　</td>
-                <td>情報支援プロボノ・プラットフォーム（iSPP）</td>
-              </tr>
-              <tr>
-                <td>古橋 大地</td>
-                <td>Race for Resilience 実行委員長</td>
-              </tr>
-              <tr>
-                <td>間壁 大</td>
-                <td>情報支援プロボノ・プラットフォーム（iSPP）</td>
-              </tr>
-              <tr>
-                <td>山寺 純</td>
-                <td>Eyes, JAPAN Co. Ltd. </td>
-              </tr>
-            </tbody>
-          </table>
+    <iframe src="https://docs.google.com/forms/d/1dzqDn1dWYYkgBmeLLq2_IvH4lhWjHH2mXN9JwRhMpc0/viewform?embedded=true" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0">読み込み中...</iframe>
 
     </div><!-- /.container -->
 
@@ -172,6 +86,36 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+    $(function() {
+        
+        var $allDocs = $("iframe[src^='https://docs.google.com'], object, embed"),
+        $fluidEl = $(".container");
+            
+      $allDocs.each(function() {
+      
+        $(this)
+          // jQuery .data does not work on object/embed elements
+          .attr('data-aspectRatio', this.height / this.width)
+          .removeAttr('height')
+          .removeAttr('width');
+      
+      });
+      
+      $(window).resize(function() {
+        var newWidth = $fluidEl.width();
+        $allDocs.each(function() {
+
+          var $el = $(this);
+          $el
+              .width(newWidth)
+              .height(newWidth * $el.attr('data-aspectRatio'));
+      
+      });
+      }).resize();
+    });
+
+    </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
