@@ -22,8 +22,38 @@ body {
     padding: 0 0 0 60%;
 }
 
-.img-responsive {  
-  display: block;  
-  height: auto;  
-  max-width: 100%;  
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
+
+.highlight{
+    background-color: #21b776;
+    color: #fff;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.highlight-shadow{
+    box-shadow: 4px -4px 5px rgba(0,0,0,0.2);
+}
+
+.highlight h2, .highlight h3, .highlight a{
+  color:#fff;
+}
+
+.highlight p{
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/*.highlight .content{
+  background-color: #fff;
+  padding: 40px;
+  width: 80%;
+  margin: 0 auto;
+}*/
+
