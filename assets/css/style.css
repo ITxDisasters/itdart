@@ -14,8 +14,15 @@ body {
   /*text-align: center;*/
   text-align: left;
 }
+
 .itdart-template h3 {
     color: #21b776;
+}
+
+.itdart-template .col-md-4 {
+    margin-left: 0;
+    padding-left: 19px;
+    border-left: 1px solid #eee;
 }
 
 .orgintro {
