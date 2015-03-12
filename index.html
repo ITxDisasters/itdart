@@ -15,8 +15,8 @@
     <meta property="og:title" content="情報支援レスキュー隊／IT DART">
     <meta property="og:type" content="website">
     <meta property="og:description" content="災害発生時に迅速に被災地に赴き、情報の収集・活用・発信に関わる支援活動を行う">
-    <meta property="og:url" content="http://itdart.itxsaigai.org">
-    <meta property="og:image" content="http://itdart.itxsaigai.org/img/logo_itdart_big.png">
+    <meta property="og:url" content="http://www.itdart.org">
+    <meta property="og:image" content="http://www.itdart.org/img/logo_itdart_big.png">
     <meta property="og:site_name" content="情報支援レスキュー隊／IT DART">
 
     <!-- Bootstrap core CSS -->
@@ -102,8 +102,10 @@
           </div>
           <div class="col-xs-12 col-sm-6">
             <p>詳しくは以下のスライドをご覧ください。</p>
-            <div class="slideshare">
-              <p> <iframe src="http://www.slideshare.net/slideshow/embed_code/33522765" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
+            <div class="embed-responsive embed-responsive-4by3">
+              <!-- <div class="slideshare"> -->
+                <iframe class="embed-responsive-item" src="http://www.slideshare.net/slideshow/embed_code/33522765" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+              <!--  </div> -->
             </div>
           </div>
         </div>
@@ -126,22 +128,23 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!--
     <script>
     $(function() {
-        
+
         var $allVideos = $("iframe[src^='http://www.slideshare.net'], object, embed"),
         $fluidEl = $(".col-sm-6");
-            
+
       $allVideos.each(function() {
-      
+
         $(this)
           // jQuery .data does not work on object/embed elements
           .attr('data-aspectRatio', this.height / this.width)
           .removeAttr('height')
           .removeAttr('width');
-      
+
       });
-      
+
       $(window).resize(function() {
         var newWidth = $fluidEl.width();
         $allVideos.each(function() {
@@ -150,12 +153,13 @@
           $el
               .width(newWidth)
               .height(newWidth * $el.attr('data-aspectRatio'));
-      
+
       });
       }).resize();
     });
 
     </script>
+-->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -165,6 +169,6 @@
         ga('create', 'UA-43778521-3', 'itxsaigai.org');
         ga('send', 'pageview');
 
-    </script>  
+    </script>
   </body>
 </html>
