@@ -15,8 +15,8 @@
     <meta property="og:title" content="情報支援レスキュー隊／IT DART">
     <meta property="og:type" content="website">
     <meta property="og:description" content="災害発生時に迅速に被災地に赴き、情報の収集・活用・発信に関わる支援活動を行う">
-    <meta property="og:url" content="http://itdart.itxsaigai.org">
-    <meta property="og:image" content="http://itdart.itxsaigai.org/img/logo_itdart_big.png">
+    <meta property="og:url" content="http://www.itdart.org">
+    <meta property="og:image" content="http://www.itdart.org/img/logo_itdart_big.png">
     <meta property="og:site_name" content="情報支援レスキュー隊／IT DART">
 
     <!-- Bootstrap core CSS -->
@@ -88,20 +88,20 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script>
     $(function() {
-        
+
         var $allDocs = $("iframe[src^='https://docs.google.com'], object, embed"),
         $fluidEl = $(".container");
-            
+
       $allDocs.each(function() {
-      
+
         $(this)
           // jQuery .data does not work on object/embed elements
           .attr('data-aspectRatio', this.height / this.width)
           .removeAttr('height')
           .removeAttr('width');
-      
+
       });
-      
+
       $(window).resize(function() {
         var newWidth = $fluidEl.width();
         $allDocs.each(function() {
@@ -110,7 +110,7 @@
           $el
               .width(newWidth)
               .height(newWidth * $el.attr('data-aspectRatio'));
-      
+
       });
       }).resize();
     });
@@ -125,6 +125,6 @@
         ga('create', 'UA-43778521-3', 'itxsaigai.org');
         ga('send', 'pageview');
 
-    </script>  
+    </script>
   </body>
 </html>
