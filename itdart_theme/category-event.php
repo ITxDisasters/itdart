@@ -33,11 +33,9 @@
             </section>
         <?php endif; wp_reset_postdata(); ?>
         
-        <?php if(function_exists('bcn_display')): ?>
-            <p class="breadcrumb">
-                <?php bcn_display(); ?>
-            </p>
-        <?php endif; ?>
+        <p class="breadcrumb">
+            <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="ホームへ戻る" href="http://itdart-org.check-xserver.jp" class="home">IT DART</a></span> &gt; <span typeof="v:Breadcrumb"><span property="v:title">イベント</span></span>
+        </p>
         
         <?php if(function_exists('wp_pagenavi')) {
             wp_pagenavi(array( 'type' => 'multipart'));

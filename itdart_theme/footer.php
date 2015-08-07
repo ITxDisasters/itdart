@@ -46,7 +46,7 @@
     </footer>
 </div>
 
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/ready.js" type="text/javascript"></script>
 <?php wp_footer(); ?>
 </body>

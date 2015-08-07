@@ -15,15 +15,15 @@
             </section>
         <?php endwhile; ?>
 
-        <?php if(function_exists('bcn_display')): ?>
-            <p class="breadcrumb">
-                <?php bcn_display(); ?>
-            </p>
-        <?php endif; ?>
-        
-        <?php if(function_exists('wp_pagenavi')) {
-            wp_pagenavi(array( 'type' => 'multipart'));
-        } ?>
+            <?php if(function_exists('bcn_display')): ?>
+                <p class="breadcrumb">
+                    <?php bcn_display(); ?>
+                </p>
+            <?php endif; ?>
+
+            <?php if(function_exists('wp_pagenavi')) {
+                wp_pagenavi(array( 'type' => 'multipart'));
+            } ?>
 
         <?php endif; ?>
 
